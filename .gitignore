@@ -1,66 +1,63 @@
-# ── Claude / agentes de IA ───────────────────────────
+# ── Claude / AI agents ───────────────────────────────
 CLAUDE.md
-PLAN.md
 .claude/
 .cursor/
 
-# ── Xcode ────────────────────────────────────────────
+# ── Flutter / Dart ───────────────────────────────────
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
 build/
-DerivedData/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata/
-*.xccheckout
-*.moved-aside
-*.xcuserstate
-*.xcscmblueprint
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
+flutter_*.png
+flutter_*.log
+linked_*.ds
+unlinked.ds
+unlinked_spec.ds
+migrate_working_dir/
+**/doc/api/
+**/.last_build_id
 
-# ── Swift Package Manager ────────────────────────────
-.build/
-Packages/
-Package.resolved
-*.xcodeproj/xcuserdata/
-.swiftpm/
+# Generated localizations (recreated by `flutter pub get`)
+lib/l10n/app_localizations*.dart
 
-# ── CocoaPods ────────────────────────────────────────
-Pods/
-*.xcworkspace
+# Generated platform folders (recreated by `flutter create .`)
+ios/
+android/
+linux/
+macos/
+windows/
+web/
 
-# ── Carthage ─────────────────────────────────────────
-Carthage/Build/
-Carthage/Checkouts
+# Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
 
-# ── fastlane ─────────────────────────────────────────
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+# Coverage
+coverage/
 
-# ── macOS ────────────────────────────────────────────
+# IDE / editors
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+
+# General
+*.class
+*.log
+*.pyc
+
+.metadata
+
+# ── OS ───────────────────────────────────────────────
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# ── Windows ──────────────────────────────────────────
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-
-# ── Editores ─────────────────────────────────────────
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+._*

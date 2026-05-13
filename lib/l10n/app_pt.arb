@@ -1,0 +1,188 @@
+{
+  "@@locale": "pt",
+
+  "tabPets": "Os meus pets",
+  "tabAlerts": "Alertas",
+  "tabSettings": "Definições",
+
+  "commonCancel": "Cancelar",
+  "commonSave": "Guardar",
+  "commonAdd": "Adicionar",
+  "commonDelete": "Apagar",
+  "commonEdit": "Editar",
+  "commonToday": "Hoje",
+  "commonDash": "—",
+  "commonYes": "Sim",
+  "commonNo": "Não",
+
+  "petsTitle": "Os meus pets",
+  "petsEmptyTitle": "Ainda não tens pets",
+  "petsEmptySubtitle": "Adiciona o teu primeiro animal",
+  "petsEmptyButton": "Adicionar pet",
+  "petsSectionDogs": "Cães 🐕",
+  "petsSectionCats": "Gatos 🐈",
+  "petsSectionBirds": "Aves 🦜",
+  "petsSectionRabbits": "Coelhos 🐇",
+  "petsSectionHamsters": "Hamsters 🐹",
+  "petsSectionFish": "Peixes 🐟",
+  "petsSectionReptiles": "Répteis 🦎",
+  "petsSectionOther": "Outros 🐾",
+  "petsSectionDeceasedArchived": "Falecidos e arquivados",
+  "petsShowArchived": "Mostrar arquivados e falecidos",
+
+  "petDetailColor": "Cor",
+  "petDetailCoat": "Pelo",
+  "petDetailStatsVaccines": "Vacinas",
+  "petDetailStatsDeworming": "Desparasit.",
+  "petDetailStatsAlerts": "Alertas",
+  "petDetailFilterAll": "Todos",
+  "petDetailRecordsEmpty": "Sem registos de saúde",
+  "petDetailRecordsAdd": "Adicionar registo",
+  "petDetailMenuEdit": "Editar pet",
+  "petDetailMenuAddRecord": "Adicionar registo de saúde",
+  "petDetailMenuChangeStatus": "Alterar estado",
+  "petDetailRecordDelete": "Apagar registo",
+  "petDetailRecordNext": "Próxima: ",
+  "petDetailStatusOverdue": "Em atraso",
+  "petDetailStatusDueSoon": "Em breve",
+  "petDetailSectionId": "Identificação",
+  "petDetailSectionVet": "Veterinário",
+  "petDetailSectionHealth": "Saúde",
+  "petDetailDeceasedOn": "Faleceu em {date}",
+  "@petDetailDeceasedOn": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "petDetailNoData": "Sem informação",
+
+  "petFormTitleNew": "Novo pet",
+  "petFormTitleEdit": "Editar pet",
+  "petFormSectionSpecies": "Tipo de animal",
+  "petFormSectionBasics": "Informações básicas",
+  "petFormSectionFeatures": "Características",
+  "petFormSectionId": "Identificação",
+  "petFormSectionVet": "Veterinário",
+  "petFormSectionHealth": "Saúde",
+  "petFormName": "Nome *",
+  "petFormBreed": "Raça *",
+  "petFormBirthDate": "Data de nascimento",
+  "petFormGender": "Género",
+  "petFormColor": "Cor",
+  "petFormCoatType": "Tipo de pelo",
+  "petFormCustomSpecies": "Que tipo de animal? *",
+  "petFormWeight": "Peso (kg)",
+  "petFormMicrochip": "Número de microchip",
+  "petFormVetName": "Nome do veterinário",
+  "petFormVetPhone": "Telefone do veterinário",
+  "petFormInsurance": "Companhia de seguros",
+  "petFormInsurancePolicy": "Número de apólice",
+  "petFormSterilized": "Esterilizado/a",
+  "petFormAllergies": "Alergias",
+  "petFormMedicalConditions": "Condições médicas",
+
+  "statusAlive": "Vivo",
+  "statusDeceased": "Falecido",
+  "statusArchived": "Arquivado",
+  "statusChangeTitle": "Alterar estado",
+  "statusDeathDate": "Data do falecimento",
+
+  "recordFormTitle": "Novo registo — {petName}",
+  "@recordFormTitle": {
+    "placeholders": { "petName": { "type": "String" } }
+  },
+  "recordFormSectionType": "Tipo de registo",
+  "recordFormSectionDetails": "Detalhes",
+  "recordFormSectionNext": "Próxima dose / alerta",
+  "recordFormType": "Tipo",
+  "recordFormDate": "Data",
+  "recordFormNotes": "Notas (opcional)",
+  "recordFormToggleHasNext": "Definir próxima data / alerta",
+  "recordFormNextDate": "Data do alerta",
+  "recordFormToggleNotify": "Ativar notificações",
+  "recordFormFooterNotify": "Receberás uma notificação às 9h no dia do alerta e 3 dias antes.",
+  "recordFormPlaceholderVaccine": "Ex: Raiva, Parvovírus, Esgana...",
+  "recordFormPlaceholderDeworming": "Ex: Milbemax, Advocate, Bravecto...",
+  "recordFormPlaceholderConsultation": "Motivo da consulta",
+  "recordFormPlaceholderSurgery": "Nome da cirurgia",
+  "recordFormPlaceholderExam": "Tipo de exame",
+  "recordFormPlaceholderOther": "Descrição",
+
+  "alertsTitle": "Alertas",
+  "alertsEmptyTitle": "Tudo em dia!",
+  "alertsEmptySubtitle": "Sem alertas pendentes. Adiciona registos de saúde com datas de alerta para os ver aqui.",
+  "alertsSectionOverdue": "Em atraso",
+  "alertsSectionUpcoming": "Próximos",
+  "alertsDaysAgo": "{days, plural, =1{Há 1 dia} other{Há {days} dias}}",
+  "@alertsDaysAgo": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+  "alertsDaysUntil": "{days, plural, =1{Em 1 dia} other{Em {days} dias}}",
+  "@alertsDaysUntil": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+
+  "settingsTitle": "Definições",
+  "settingsLanguageSection": "Idioma",
+  "settingsLanguagePicker": "Idioma da app",
+  "settingsLanguageFooter": "A app atualiza visualmente ao mudar de idioma.",
+  "settingsAboutSection": "Sobre",
+  "settingsAboutVersion": "Versão",
+
+  "speciesDog": "Cão",
+  "speciesCat": "Gato",
+  "speciesBird": "Ave",
+  "speciesRabbit": "Coelho",
+  "speciesHamster": "Hamster",
+  "speciesFish": "Peixe",
+  "speciesReptile": "Réptil",
+  "speciesOther": "Outro",
+
+  "genderMale": "Macho",
+  "genderFemale": "Fêmea",
+
+  "coatShort": "Curto",
+  "coatMedium": "Médio",
+  "coatLong": "Longo",
+  "coatCurly": "Encaracolado",
+  "coatHairless": "Sem pelo",
+
+  "recordTypeVaccine": "Vacina",
+  "recordTypeDeworming": "Desparasitação",
+  "recordTypeConsultation": "Consulta",
+  "recordTypeSurgery": "Cirurgia",
+  "recordTypeExam": "Exame",
+  "recordTypeOther": "Outro",
+
+  "ageNewborn": "Recém-nascido",
+  "ageYears": "{years, plural, =1{1 ano} other{{years} anos}}",
+  "@ageYears": {
+    "placeholders": { "years": { "type": "int" } }
+  },
+  "ageMonths": "{months, plural, =1{1 mês} other{{months} meses}}",
+  "@ageMonths": {
+    "placeholders": { "months": { "type": "int" } }
+  },
+  "ageDays": "{days, plural, =1{1 dia} other{{days} dias}}",
+  "@ageDays": {
+    "placeholders": { "days": { "type": "int" } }
+  },
+
+  "notifTitle": "{petName} — {typeName}",
+  "@notifTitle": {
+    "placeholders": {
+      "petName": { "type": "String" },
+      "typeName": { "type": "String" }
+    }
+  },
+  "notifBodyNow": "Está na altura: {recordName}",
+  "@notifBodyNow": {
+    "placeholders": { "recordName": { "type": "String" } }
+  },
+  "notifReminderTitle": "{petName} — Lembrete",
+  "@notifReminderTitle": {
+    "placeholders": { "petName": { "type": "String" } }
+  },
+  "notifReminderBody": "{recordName} em 3 dias",
+  "@notifReminderBody": {
+    "placeholders": { "recordName": { "type": "String" } }
+  }
+}

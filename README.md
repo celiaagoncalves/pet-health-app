@@ -1,152 +1,187 @@
-# 🐾 Pet Health
+<p align="center">
+  <img src="assets/banner.png" alt="Pet Health" width="100%"/>
+</p>
 
-> Aplicação iOS nativa para gerir a saúde, vacinação e bem-estar dos teus animais de estimação.
+<p align="center">
+  <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-3.19+-blue.svg" alt="Flutter"/></a>
+  <a href="https://dart.dev"><img src="https://img.shields.io/badge/Dart-3.3+-0175C2.svg" alt="Dart"/></a>
+  <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20Android-purple.svg" alt="Platforms"/>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/></a>
+</p>
 
-[![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)](https://swift.org)
-[![Platform](https://img.shields.io/badge/Platform-iOS%2017%2B-blue.svg)](https://developer.apple.com/ios/)
-[![SwiftUI](https://img.shields.io/badge/UI-SwiftUI-purple.svg)](https://developer.apple.com/xcode/swiftui/)
-[![SwiftData](https://img.shields.io/badge/Storage-SwiftData-green.svg)](https://developer.apple.com/documentation/swiftdata)
+<p align="center">
+  <strong>A cross-platform app to manage your pets' health, vaccinations and wellbeing.</strong><br/>
+  Single Flutter codebase · iOS & Android · 🇵🇹 Portuguese / 🇬🇧 English · 100% local data
+</p>
 
 ---
 
-## 📋 Índice
+## 📋 Table of contents
 
-- [Visão geral](#-visão-geral)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologia](#-tecnologia)
-- [Requisitos](#-requisitos)
-- [Instalação](#-instalação)
-- [Estrutura do projeto](#-estrutura-do-projeto)
-- [Modelo de dados](#-modelo-de-dados)
-- [Notificações](#-notificações)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech stack](#-tech-stack)
+- [Documentation](#-documentation)
+- [Getting started](#-getting-started)
+- [Project structure](#-project-structure)
+- [Localization](#-localization)
 - [Roadmap](#-roadmap)
-- [Contribuir](#-contribuir)
-- [Licença](#-licença)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## 🌟 Visão geral
+## 🌟 Overview
 
-O **Pet Health** é uma aplicação iOS que ajuda os tutores de animais de estimação a manterem-se organizados em relação a vacinas, desparasitações, consultas e outros eventos de saúde. Todos os dados são armazenados localmente no dispositivo, sem dependências de servidores externos nem contas de utilizador.
+**Pet Health** is a Flutter app that helps pet owners stay on top of vaccinations, deworming, vet visits and other health events for their dogs, cats, and any other animal companion. All data is stored **locally** on the device — no servers, no accounts, no tracking.
 
-## ✨ Funcionalidades
+The same codebase compiles to both iOS and Android with Material 3 UI on each platform.
 
-| Área | Descrição |
-|------|-----------|
-| 🐶 **Gestão de animais** | Adiciona e edita perfis de cães e gatos com raça, data de nascimento, género, cor e tipo de pelagem |
-| 💉 **Registos de saúde** | Vacinas, desparasitações, consultas, cirurgias, exames e outros eventos com notas e datas futuras |
-| 🔔 **Alertas e lembretes** | Notificações automáticas 3 dias antes e no próprio dia do próximo tratamento |
-| 📊 **Indicadores de estado** | Visualiza registos em atraso, a vencer em 7 dias e futuros |
-| 📈 **Estatísticas por animal** | Resumo de vacinas, desparasitações e alertas pendentes de cada pet |
-| 🔍 **Filtros** | Filtra os registos de saúde por tipo |
-| 🎂 **Idade calculada** | Idade do animal calculada automaticamente em anos/meses |
+## ✨ Features
 
-## 🛠 Tecnologia
+| Area | Description |
+|------|-------------|
+| 🐾 **8 species + custom** | Dogs, cats, birds, rabbits, hamsters, fish, reptiles — or anything else via the "Other" option with a free-text name |
+| 💉 **Health records** | Log vaccines, deworming, consultations, surgeries, exams and other events with notes and future due dates |
+| 📒 **Caderneta** | Microchip, insurance, veterinarian contact, weight, sterilization status, allergies and medical conditions |
+| 🔔 **Smart reminders** | Local notifications fired **3 days before** and **on the due date** of every upcoming treatment |
+| 📊 **Status indicators** | See at a glance what's overdue, due within 7 days, or scheduled further out |
+| 📈 **Per-pet stats** | Summary of vaccines, deworming events and pending alerts for each pet |
+| 🪦 **Lifecycle** | Mark pets as deceased (with date) or archived — they're hidden by default but always accessible |
+| 🎂 **Auto-calculated age** | Pet age computed automatically in days / months / years |
+| 🌍 **Bilingual UI** | Portuguese (default) and English, switchable at runtime from the Settings tab |
+| 🌓 **Light & dark mode** | Follows the system theme |
 
-- **[Swift 5.9](https://swift.org)** — Linguagem principal
-- **[SwiftUI](https://developer.apple.com/xcode/swiftui/)** — Interface declarativa nativa
-- **[SwiftData](https://developer.apple.com/documentation/swiftdata)** — Persistência local (sucessor moderno do Core Data)
-- **[UserNotifications](https://developer.apple.com/documentation/usernotifications)** — Notificações locais agendadas
+## 🛠 Tech stack
 
-> 💡 O projeto **não usa dependências externas** — apenas frameworks nativos da Apple.
+- **[Flutter 3.19+](https://flutter.dev)** — cross-platform UI framework
+- **[Dart 3.3+](https://dart.dev)** — primary language
+- **[Hive](https://pub.dev/packages/hive)** — fast, lightweight local NoSQL persistence
+- **[flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications)** — scheduled notifications on iOS and Android
+- **[Provider](https://pub.dev/packages/provider)** — state management for locale changes
+- **[shared_preferences](https://pub.dev/packages/shared_preferences)** — persisted user preferences
+- **Material 3** — modern adaptive UI
 
-## 📦 Requisitos
+> 💡 **Zero external dependencies on backend services.** Everything runs offline.
 
-- **iOS 17** ou superior
-- **Xcode 15** ou superior
-- **macOS Sonoma** (14.0+) para desenvolvimento
+## 📚 Documentation
 
-## 🚀 Instalação
+| File | What's in it |
+|---|---|
+| [`README.md`](README.md) | This page — high-level overview |
+| [`ROADMAP.md`](ROADMAP.md) | What's shipped, what's next, what's in the backlog |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Layered architecture, sequence diagrams, design decisions |
+| [`docs/DATABASE.md`](docs/DATABASE.md) | Hive schema, ER diagram, type adapters, migration strategy |
+| [`CLAUDE.md`](CLAUDE.md) | Conventions guide for AI agents working in this repo |
+
+## 🚀 Getting started
+
+### 1. Install Flutter
+
+Follow the official guide: [docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install).
+
+### 2. Clone and bootstrap
 
 ```bash
-# 1. Clona o repositório
-git clone https://github.com/<o-teu-username>/pet-health-app.git
-
-# 2. Entra na pasta
+git clone https://github.com/<your-username>/pet-health-app.git
 cd pet-health-app
 
-# 3. Abre no Xcode
-open PetHealthApp.swift
+# Generate the platform folders (ios/ and android/) — they are not committed
+flutter create . --org com.celiagoncalves --platforms ios,android
+
+# Install dependencies and regenerate AppLocalizations
+flutter pub get
 ```
 
-No Xcode:
-1. Seleciona um simulador ou dispositivo iOS 17+
-2. Compila e executa com `Cmd + R`
-3. Aceita o pedido de permissão para notificações na primeira execução
+### 3. Run
 
-## 🗂 Estrutura do projeto
+```bash
+# Android (works on Windows / macOS / Linux)
+flutter run -d android
+
+# iOS (macOS only)
+flutter run -d ios
+
+# Pick a device interactively
+flutter run
+```
+
+### 4. Build for release
+
+```bash
+flutter build apk --release           # Android APK
+flutter build appbundle --release     # Android App Bundle (Play Store)
+flutter build ios --release           # iOS (macOS only)
+```
+
+> ⚠️ **Windows can build Android.** Building iOS requires **macOS + Xcode** — or a CI runner like Codemagic / GitHub Actions with a macOS image.
+
+## 🗂 Project structure
 
 ```
 pet-health-app/
-├── PetHealthApp.swift          # Entry point @main da app
-├── Models/
-│   ├── Pet.swift                # Modelo Pet (+ Species, Gender, CoatType)
-│   └── HealthRecord.swift       # Modelo HealthRecord (+ HealthRecordType)
-├── Managers/
-│   └── NotificationManager.swift # Agendamento de notificações locais
-└── Views/
-    ├── ContentView.swift        # Container com TabView principal
-    ├── Pets/
-    │   ├── PetListView.swift
-    │   ├── PetDetailView.swift
-    │   └── AddEditPetView.swift
-    ├── Health/
-    │   └── AddHealthRecordView.swift
-    └── Alerts/
-        └── AlertsView.swift
+├── assets/
+│   ├── logo.svg                        # App icon (source — convert to PNG for launcher)
+│   └── banner.png                      # README banner
+├── docs/
+│   ├── ARCHITECTURE.md                 # Technical architecture + diagrams
+│   └── DATABASE.md                     # Data model + ER diagram
+├── lib/
+│   ├── main.dart                       # App entry point + MaterialApp setup
+│   ├── l10n/
+│   │   ├── app_pt.arb                  # Portuguese strings (default)
+│   │   └── app_en.arb                  # English strings
+│   ├── models/                         # Pet, HealthRecord, enums + hand-written Hive adapters
+│   ├── services/                       # database / notifications / locale singletons
+│   ├── screens/                        # one folder per feature (pets, health, alerts, settings)
+│   └── widgets/                        # small reusable UI bits
+├── pubspec.yaml
+├── analysis_options.yaml
+├── l10n.yaml
+├── ROADMAP.md
+├── CLAUDE.md
+├── LICENSE
+└── README.md
 ```
 
-## 🗃 Modelo de dados
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full layer breakdown with diagrams.
 
-```
-┌──────────────────┐         ┌──────────────────────┐
-│      Pet         │  1 ──*  │    HealthRecord      │
-├──────────────────┤         ├──────────────────────┤
-│ name             │         │ type                 │
-│ species          │         │ name                 │
-│ birthDate        │         │ date                 │
-│ breed            │         │ notes                │
-│ gender           │         │ nextDueDate?         │
-│ color            │         │ notificationID?      │
-│ coatType         │         │ pet (relação)        │
-│ healthRecords[]  │         └──────────────────────┘
-└──────────────────┘
-```
+## 🌍 Localization
 
-A relação `Pet → HealthRecord` usa `deleteRule: .cascade`: ao remover um animal, os seus registos são também eliminados.
+The app uses Flutter's official `intl` + `flutter_localizations` setup with `.arb` files.
 
-## 🔔 Notificações
+- 🇵🇹 **Portuguese (pt)** — default, template file
+- 🇬🇧 **English (en)**
 
-Sempre que um registo tem `nextDueDate` definida, o [NotificationManager](Managers/NotificationManager.swift) agenda **duas notificações locais**:
+Strings live in [`lib/l10n/app_pt.arb`](lib/l10n/app_pt.arb) and [`lib/l10n/app_en.arb`](lib/l10n/app_en.arb). The `AppLocalizations` class is auto-generated by `flutter pub get` (config: [`l10n.yaml`](l10n.yaml)).
 
-- **3 dias antes**, às 09:00 — lembrete antecipado
-- **No próprio dia**, às 09:00 — alerta principal
+Language can be changed at runtime from the **Settings tab**. The choice is persisted via `shared_preferences` under the key `appLanguage`.
 
-Quando o registo é apagado ou editado, as notificações são canceladas via `cancelNotification(id:)`.
+To add a new language, copy `app_pt.arb` to `app_<code>.arb`, translate the values, and register the locale in [`lib/services/locale_service.dart`](lib/services/locale_service.dart).
 
 ## 🗺 Roadmap
 
-- [ ] Suporte para mais espécies (aves, roedores, répteis)
-- [ ] Exportar histórico clínico em PDF
-- [ ] iCloud sync entre dispositivos
-- [ ] Widget para o ecrã principal com próximas vacinas
-- [ ] Versão Apple Watch para alertas
-- [ ] Localização em inglês/espanhol
+The full plan with phases lives in [ROADMAP.md](ROADMAP.md). Highlights of what's coming next:
 
-## 🤝 Contribuir
+- 📸 **Phase 2** — Pet photos & photo diary
+- 📝 **Phase 3** — Notes / behavioral journal
+- 📅 **Phase 4** — Calendar with birthdays & alerts
+- 🔎 **Phase 5** — Breed autocomplete (curated PT + EN list)
 
-Contribuições são bem-vindas! Para sugerir melhorias:
+## 🤝 Contributing
 
-1. Faz fork do repositório
-2. Cria uma branch (`git checkout -b feature/minha-feature`)
-3. Faz commit das tuas alterações (`git commit -m 'Adiciona X'`)
-4. Faz push para a branch (`git push origin feature/minha-feature`)
-5. Abre um Pull Request
+Contributions are welcome! Before opening a PR, please skim [CLAUDE.md](CLAUDE.md) for the project conventions (the most important: **no hardcoded user strings**, **stay in Dart**, **no `build_runner`**).
 
-## 📄 Licença
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m 'Add X'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a Pull Request
 
-Este projeto está licenciado sob a licença MIT — vê o ficheiro [LICENSE](LICENSE) para detalhes.
+## 📄 License
+
+This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-<p align="center">Feito com ❤️ para os nossos amigos de quatro patas</p>
+<p align="center">Made with ❤️ for our four-legged (and feathered, and scaly) friends</p>
